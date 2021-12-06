@@ -1,0 +1,30 @@
+﻿<Window x:Class="WpfPythagoras.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfPythagoras"
+        mc:Ignorable="d" Loaded="MainWindow_Loaded" WindowStartupLocation="CenterScreen" Background="LightGray"
+        Title="Julians Pythagoras" Height="450" Width="800">
+    <DockPanel>
+        <StackPanel>
+            <Canvas Height="200">
+                <Image x:Name="image1" Source="D:\programmierenLernen\rechtwinkliges-dreieck.jpg" Margin="10" Height="200" Panel.ZIndex="1" Canvas.Left="100"></Image>
+                <TextBox x:Name="tbKatheteA" Text="" Width="40" ToolTip="Bitte nur Zahlen eingeben." Panel.ZIndex="2" Canvas.Left="50" Canvas.Top="90" Background="#FFF0E2D2"/>
+                <TextBox x:Name="tbKatheteB" Text="" Width="40" Canvas.Left="220" Canvas.Top="220" Panel.ZIndex="2" Background="#FFF0E2D2"/>
+                <TextBox x:Name="tbHypotenuse" Text="" Width="40" Canvas.Left="260" Canvas.Top="50" Background="#FFF0E2D2" Panel.ZIndex="2"/>
+                <TextBox x:Name="tbFlaeche" Text="" Width="40" Panel.ZIndex="2" Background="#FFF0E2D2" Canvas.Left="160" Canvas.Top="100"></TextBox>
+            </Canvas>
+
+            <StackPanel Orientation="Horizontal" Margin="5,50,5,5" Height="50">
+
+                <Button x:Name="button1" Content="berechne" Width="100" Margin="50,5,5,5" FontSize="15" Click="btnBerechne" IsDefault="True"></Button>
+                <Button x:Name="btnClear" Content="löschen" Width="100" Margin="50,5,5,5" FontSize="15" Click="btnClear_Click"></Button>
+                <Button x:Name="btnAbbruch" Content="Abbruch" Width="100" Margin="50,5,5,5" FontSize="15" Click="btnAbbruch_Click" IsCancel="True"></Button>
+
+
+            </StackPanel>
+        </StackPanel>
+
+    </DockPanel>
+</Window>
